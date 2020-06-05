@@ -1,0 +1,67 @@
+{
+    "config": {
+        "name": "testcase description",
+        "variables": {},
+        "verify": false
+    },
+    "teststeps": [
+        {
+            "name": "/graphql/f/p5N7Yr",
+            "request": {
+                "url": "https://staging.jinshuju.net/graphql/f/p5N7Yr",
+                "params": {
+                    "operationName": "PublishedForm",
+                    "variables": "{\"fromQueryForm\":false,\"fromPublished\":true,\"showExtraConfig\":false,\"id\":\"p5N7Yr\"}",
+                    "extensions": "{\"persistedQuery\":{\"version\":1,\"sha256Hash\":\"aa318b40c1898a3aad2428a0a5ee19154cb32501d38b7a04167c7a6c3b8be4fc\"}}"
+                },
+                "method": "GET",
+                "cookies": {
+                    "_ga": "GA1.2.627629228.1589856192",
+                    "jsj_locale": "zh-CN",
+                    "UM_distinctid": "172312b859c1da-05ce04942ee527-30677d00-1fa400-172312b859da72",
+                    "_gd_sid_mo": "IjVlY2I2M2E2NWI2NTE2MzJjNGNmMDMzOSI%3D--0929e44eb7696d06b219a2c2311aa75a652371db",
+                    "_gd_sid_fusion": "IjVlY2I3YjFkMGJjMmIzN2E2ODVkOTk3YSI%3D--34b38b1544d0da1072cb7a7fb52b4099e6e67514",
+                    "_gid": "GA1.2.1682575532.1590980399",
+                    "has_visited_dashboard_in_two_days": "true",
+                    "start_filling_time_cgvmkI": "1591004570",
+                    "_gd_sid": "IjVlZDRkZDA2OTRiMzY4YjYwMGYwZDg2NiI%3D--9c9acbd4310aff62841a7faa9275090628013696",
+                    "_jinshuju_ut": "IjVjN2JlOGU3ZDM3Zjc3NTQyOTI4MDM3OSI%3D--bc0971bcd0f6eb762794df2dd62e5a5cd3fea93e",
+                    "ad_shown_count_of_5caab453d37f7755f071f3af": "1",
+                    "ad_shown_count_of_5cdd0dd1d37f771b8093c3df": "1",
+                    "Hm_lvt_47cd03e974df6869353431fe4f4d6b2f": "1590982701,1590993628,1590995402,1591069870",
+                    "_gd_sid_staging": "IjVlZDVmNTYzNmVjNWQ5MDk2M2E4MjU3MSI%3D--fa0ce7eff4ba232a58c2ad241f90397c23403e53",
+                    "jsj_uid": "d93ef053-e8bf-4c3c-ae93-2bb8257727b9",
+                    "country_code": "CN",
+                    "_caid": "IjVjN2JlOGU3ZDM3Zjc3NTQyOTI4MDM3YiI%3D--373bb3121c485a7fb2ee7da6c68a45e094a25de4",
+                    "start_filling_time_p5N7Yr": "1591083285",
+                    "mixpanel_event_history": "form_updated",
+                    "_gd_session": "Qy9ENzN3S0U5RGhNVExDZTF5ZmtKbGVkV3hScGRyMGZMK3c3TlJjQjlQK3BFV3pLZlU4WkRnY2N5ckxpMUh4THVOekVSZHVqWUNkQmZJWmloV2wwMG9WaXorazk3YWZmeVFMYjBCc2hFR0N5N21RemZZYjk0RzZ3dXVhZkkrSmtzcmNzV0JoSjYwdE41RlhRQnRVQ3FGa3JnbTB3WmdiTk1SZnBFUGkzVXhSNi9kS3FIZGZiQkRwVkJMSTl2SVNnbUltS0hsdTVIV01UWUxoNWp4aVk1MGpscXpMUTFxQUFNMSsxd1ZXYlUxMjRYdXFQaGdmajEyZU9ROGlaWkJWQ2xqc01BQUZ1ZUlybys1L0ZFSitYRXRvTGg3bGNFUk5DZzVFYW53S2ViR3BPaGhyM0c3OVVGN2FUS1ZzTk5pdXIrMUYycjUyY1BGTVlLWFpXWXl6UXNBPT0tLUFVTFpJZ2ZvYkx4UGFGazFTRkRpTEE9PQ%3D%3D--3c3c432b149fb5b6a443ff77cae2a2e6fe41f27a",
+                    "csrf_token": "lnjbCb5ri51pj3KhTwjJt3NhVov0tiDX979JlIM7bNqbWCLZaYE78DJCC1S+qG2OrPqL9axO2uQ3GUCeAhCTKw==",
+                    "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1591083572"
+                },
+                "headers": {
+                    "accept": "*/*",
+                    "x-gd-ssf": "MTU5MTA2ODAwOA==--8a4d400dc1fd9ff23479b2746b614b3d87258d25",
+                    "x-csrf-token": "lnjbCb5ri51pj3KhTwjJt3NhVov0tiDX979JlIM7bNqbWCLZaYE78DJCC1S+qG2OrPqL9axO2uQ3GUCeAhCTKw==",
+                    "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36",
+                    "content-type": "application/json;charset=UTF-8",
+                    "sec-fetch-site": "same-origin",
+                    "sec-fetch-mode": "cors",
+                    "sec-fetch-dest": "empty",
+                    "referer": "https://staging.jinshuju.net/f/p5N7Yr",
+                    "accept-encoding": "gzip, deflate, br",
+                    "accept-language": "zh-CN,zh;q=0.9,en;q=0.8",
+                    "if-none-match": "W/\"b22820576ab171860b65057ef5a06767\""
+                }
+            },
+            "validate": [
+                {
+                    "eq": [
+                        "status_code",
+                        200
+                    ]
+                }
+            ]
+        }
+    ]
+}
