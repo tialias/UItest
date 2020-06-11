@@ -11,8 +11,19 @@ class AddEntries:
         self.csrf_token = soup.find(attrs={"name": "csrf-token"})['content']
     def add_entries(self, graphql_url):
         data = {
-            "field_1": "张三",
-            "field_2": "18383157715"
+            "operationName": "CreatePublishedFormEntry",
+            "variables": {
+                "input": {
+                    "backgroundImage": False,
+                    "captchaData": None,
+                    "embedded": False,
+                    "entryAttributes": {
+                        "field_1": "张三",
+                        "field_2": "18383157715",
+                    },
+                    "formId": "DIoQKq"
+                }
+            }
         }
         headers = {
             "Host": "uat.jinshuju.net",
@@ -32,7 +43,7 @@ class AddEntries:
             "Cookie": self.cookies
         }
         res = requests.post(url=graphql_url, data=data, cookies=self.cookies)
-        print(res.status_code)
+        print(res.text)
 
 
 if __name__ == "__main__":
