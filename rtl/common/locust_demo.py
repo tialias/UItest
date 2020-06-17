@@ -1,14 +1,15 @@
 import requests
 from faker import Faker
-from locust import Locust, TaskSet, task, User, HttpUser
+from locust import Locust, TaskSet, task, User, HttpUser, between
 
 
-class WfTasks(TaskSet):
+class WebsiteUser(HttpUser):
+    wait_time = between(5, 9)
+
     def on_start(self):
         self.fake = Faker(locale='zh_CN')
         self.client.get(url="https://staging.jinshuju.net/f/DIoQKq")
 
-    @task(1)
     def add_entries(self):
         self.cookies = {
             "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1592188302",
@@ -79,7 +80,7 @@ class WfTasks(TaskSet):
         cookie = requests.utils.dict_from_cookiejar(res.cookies)
         self.entry_token = (cookie["entry_token"])
 
-    @task
+    @task()
     def wheel_fortune(self, url):
         cookies = {
             "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1592376825",
@@ -128,21 +129,12 @@ class WfTasks(TaskSet):
         res = self.client.get(url=url, cookies=cookies, headers=headers)
         print(res.text)
 
-    @task
+    @task()
     def lottery(self):
         res = self.client.get(url="https://staging.jinshuju.net/entries/%s/wheel_fortunes/lottery" % self.entry_token)
         print(res.text)
 
-    @task
+    @task()
     def receive(self):
         res = self.client.get(url="https://staging.jinshuju.net/entries/5trVFx03/wheel_fortunes/results/dbbcce3b")
         print(res.text)
-
-    tasks = {add_entries: 1, wheel_fortune: 1, lottery: 1, receive:1}
-
-
-class WebsiteUser(User):
-    task_set = WfTasks.tasks
-    host = "https://staging.jinshuju.net/"
-    min_wait = 1000
-    max_wait = 5000
