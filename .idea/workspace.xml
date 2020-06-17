@@ -3,14 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6fb1b493-75c9-4e7e-8af4-104704c42347" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascript/adddata/Untitled.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascript/adddata/addentries.har" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascript/adddata/addentries.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascript/adddata/addentries_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascript/adddata/postdata.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascript/adddata/uatpostdata.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascript/adddata/uatpostdata.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/datascript/adddata/uatpostdata_test.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rtl/common/submit_form.py" beforeDir="false" afterPath="$PROJECT_DIR$/rtl/common/submit_form.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +17,7 @@
     <SUITE FILE_PATH="coverage/UItest$test.coverage" NAME="test Coverage Results" MODIFIED="1585414863544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/page" />
     <SUITE FILE_PATH="coverage/UItest$Unittests_in_casepublish_py.coverage" NAME="Unittests in casepublish.py Coverage Results" MODIFIED="1585631200122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
     <SUITE FILE_PATH="coverage/UItest$Unittests_for_casepublish_CasePublish.coverage" NAME="Unittests for casepublish.CasePublish Coverage Results" MODIFIED="1585641683286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/script" />
-    <SUITE FILE_PATH="coverage/goldentest$submit_form.coverage" NAME="submit_form Coverage Results" MODIFIED="1592196702745" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rtl/common" />
+    <SUITE FILE_PATH="coverage/goldentest$submit_form.coverage" NAME="submit_form Coverage Results" MODIFIED="1592406788820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/rtl/common" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -37,7 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rtl/common/conf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="72">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -48,36 +41,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rtl/common/submit_form.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="73" column="51" lean-forward="true" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+            <state relative-caret-position="464">
+              <caret line="143" column="19" lean-forward="true" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.7/site-packages/requests/api.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.7/site-packages/requests/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1216" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.7/site-packages/requests/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="945" selection-start-line="945" selection-end-line="945" />
             </state>
           </provider>
         </entry>
@@ -102,15 +70,16 @@
         <option value="$PROJECT_DIR$/common/basepage.py" />
         <option value="$PROJECT_DIR$/script/casepublish.py" />
         <option value="$PROJECT_DIR$/page/publishpage.py" />
+        <option value="$PROJECT_DIR$/rtl/common/conf.py" />
         <option value="$PROJECT_DIR$/rtl/common/submit_form.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="307" />
-    <option name="y" value="29" />
-    <option name="width" value="1613" />
-    <option name="height" value="977" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-82" />
+    <option name="y" value="-1045" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -120,12 +89,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="goldentest" type="b2602c69:ProjectViewProjectNode" />
               <item name="goldentest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goldentest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goldentest" type="462c0819:PsiDirectoryNode" />
+              <item name="datascript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goldentest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goldentest" type="462c0819:PsiDirectoryNode" />
+              <item name="datascript" type="462c0819:PsiDirectoryNode" />
+              <item name="adddata" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="goldentest" type="b2602c69:ProjectViewProjectNode" />
@@ -142,7 +123,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,7 +131,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -279,7 +259,16 @@
       <workItem from="1585213377771" duration="7639000" />
       <workItem from="1585629748725" duration="9493000" />
       <workItem from="1591952287135" duration="3855000" />
+      <workItem from="1592319553216" duration="10205000" />
     </task>
+    <task id="LOCAL-00001" summary="complete business test">
+      <created>1592406932362</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1592406932362</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -315,18 +304,17 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31412000" />
+    <option name="totallyTimeSpent" value="41617000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="307" y="29" width="1613" height="977" extended-state="0" />
-    <editor active="true" />
+    <frame x="-310" y="-1057" width="1920" height="1057" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12748238" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11821086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28983834" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.28911918" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39954597" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -335,7 +323,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32866243" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.2673575" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -370,6 +358,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="complete business test" />
+    <option name="LAST_COMMIT_MESSAGE" value="complete business test" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md" />
     <entry file="file://$PROJECT_DIR$/page/test.py" />
@@ -389,41 +381,51 @@
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/selenium/webdriver/remote/webdriver.py" />
     <entry file="file://$PROJECT_DIR$/script/casepublish.py" />
     <entry file="file://$PROJECT_DIR$/page/publishpage.py" />
+    <entry file="file:///usr/local/lib/python3.7/site-packages/requests/utils.py" />
+    <entry file="file:///usr/local/lib/python3.7/site-packages/requests/__init__.py" />
+    <entry file="file:///usr/local/lib/python3.7/site-packages/requests/api.py" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file:///usr/local/lib/python3.7/site-packages/requests/utils.py">
+    <entry file="file://$PROJECT_DIR$/datascript/adddata/lotteryyml.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="945" selection-start-line="945" selection-end-line="945" />
+        <state relative-caret-position="336">
+          <caret line="14" column="81" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.7/site-packages/requests/__init__.py">
+    <entry file="file://$PROJECT_DIR$/datascript/adddata/cj2_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1216" />
+        <state relative-caret-position="608">
+          <caret line="63" column="21" selection-start-line="50" selection-start-column="31" selection-end-line="63" selection-end-column="21" />
+        </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datascript/adddata/cj2.har">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5291" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datascript/adddata/cj2.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/requests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/rtl/common/conf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="72">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.7/site-packages/requests/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="106" column="4" selection-start-line="106" selection-start-column="4" selection-end-line="106" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rtl/common/submit_form.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="73" column="51" lean-forward="true" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+        <state relative-caret-position="464">
+          <caret line="143" column="19" lean-forward="true" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

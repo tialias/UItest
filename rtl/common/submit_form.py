@@ -1,11 +1,14 @@
 import requests
 from faker import Faker
+from locust import HttpLocust, TaskSet, SequentialTaskSet, task
 
 
-class AddEntries:
-    def __init__(self):
-        fake = Faker(locale='zh_CN')
-        self.entry_token = None
+class WfTasks(SequentialTaskSet):
+    def on_start(self):
+        self.fake = Faker(locale='zh_CN')
+        self.client.get(url = "https://staging.jinshuju.net/f/DIoQKq")
+    @task
+    def add_entries(self):
         self.cookies = {
             "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1592188302",
             "Hm_lvt_47cd03e974df6869353431fe4f4d6b2f": "1591856820,1591861646,1591862203,1591862283",
@@ -58,8 +61,8 @@ class AddEntries:
                     "captchaData": None,
                     "embedded": False,
                     "entryAttributes": {
-                        "field_1": fake.name(),
-                        "field_2": fake.phone_number(),
+                        "field_1": self.fake.name(),
+                        "field_2": self.fake.phone_number(),
                     },
                     "formId": "DIoQKq",
                     "formMargin": False,
@@ -69,13 +72,13 @@ class AddEntries:
                 }
             }
         }
-
-    def add_entries(self, graphql_url):
-        res = requests.post(graphql_url, json=self.json, headers=self.headers)
+        res = self.client.post(url="https://staging.jinshuju.net/graphql/f/DIoQKq", json=self.json,
+                               headers=self.headers)
         print(res.status_code)
         cookie = requests.utils.dict_from_cookiejar(res.cookies)
         self.entry_token = (cookie["entry_token"])
 
+    @task
     def wheel_fortune(self, url):
         cookies = {
             "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1592376825",
@@ -121,21 +124,21 @@ class AddEntries:
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36",
         }
-        res = requests.get(url=url, cookies=cookies, headers=headers)
+        res = self.client.get(url=url, cookies=cookies, headers=headers)
         print(res.text)
 
+    @task
     def lottery(self):
-        res = requests.get(url="https://staging.jinshuju.net/entries/%s/wheel_fortunes/lottery" % self.entry_token)
+        res = self.client.get(url="https://staging.jinshuju.net/entries/%s/wheel_fortunes/lottery" % self.entry_token)
         print(res.text)
 
+    @task
     def receive(self):
-        res = requests.get(url="https://staging.jinshuju.net/entries/5trVFx03/wheel_fortunes/results/dbbcce3b")
+        res = self.client.get(url="https://staging.jinshuju.net/entries/5trVFx03/wheel_fortunes/results/dbbcce3b")
         print(res.text)
 
 
-if __name__ == "__main__":
-    ad = AddEntries()
-    ad.add_entries("https://staging.jinshuju.net/graphql/f/DIoQKq")
-    ad.wheel_fortune("https://staging.jinshuju.net/f/DIoQKq/wheel_fortune")
-    ad.lottery()
-    ad.receive()
+class WebsiteUser(HttpLocust):
+    task_set = WfTasks
+    min_wait = 1000
+    max_wait = 5000
