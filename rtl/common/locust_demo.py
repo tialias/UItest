@@ -10,6 +10,7 @@ class WebsiteUser(HttpUser):
         self.fake = Faker(locale='zh_CN')
         self.client.get(url="https://staging.jinshuju.net/f/DIoQKq")
 
+    @task
     def add_entries(self):
         self.cookies = {
             "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1592188302",

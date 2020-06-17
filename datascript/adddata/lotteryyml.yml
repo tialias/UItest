@@ -1,0 +1,40 @@
+config:
+    name: testcase description
+    variables: {}
+teststeps:
+-   name: /entries/i5KpBfNe/wheel_fortunes/lottery
+    request:
+        headers:
+            sec-fetch-dest: empty
+            sec-fetch-mode: cors
+            sec-fetch-site: same-origin
+            user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36
+            x-requested-with: XMLHttpRequest
+        method: GET
+        url: https://staging.jinshuju.net/entries/i5KpBfNe/wheel_fortunes/lottery
+    validate:
+    -   eq:
+        - status_code
+        - 200
+    -   eq:
+        - content.success
+        - true
+    -   eq:
+        - content.status
+        - win
+    -   eq:
+        - content.code
+        - ''
+    -   eq:
+        - content.title_name
+        - 一等奖
+    -   eq:
+        - content.prize_name
+        - 巴厘岛七日游
+    -   eq:
+        - content.cash_token
+        - 099454be
+    -   eq:
+        - content.redeem_url
+        - https://staging.jinshuju.net/entries/i5KpBfNe/wheel_fortunes/results/099454be

@@ -8,7 +8,7 @@ class WfTasks(TaskSet):
         self.fake = Faker(locale='zh_CN')
         self.client.get(url="https://staging.jinshuju.net/f/DIoQKq")
 
-    @task(1)
+    @task(weight=1)
     def add_entries(self):
         self.cookies = {
             "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1592188302",
@@ -138,11 +138,9 @@ class WfTasks(TaskSet):
         res = self.client.get(url="https://staging.jinshuju.net/entries/5trVFx03/wheel_fortunes/results/dbbcce3b")
         print(res.text)
 
-    tasks = {add_entries: 1, wheel_fortune: 1, lottery: 1, receive:1}
 
-
-class WebsiteUser(User):
-    task_set = WfTasks.tasks
+class WebsiteUser(HttpUser):
+    task_set = WfTasks
     host = "https://staging.jinshuju.net/"
     min_wait = 1000
     max_wait = 5000
