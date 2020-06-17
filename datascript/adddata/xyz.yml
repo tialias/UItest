@@ -1,0 +1,31 @@
+config:
+    name: testcase description
+    variables: {}
+    verify: false
+teststeps:
+-   name: /apps/255/prizes
+    request:
+        cookies:
+            _gd-wheel-fortune_session: YytiY0hvL3lNSjJkUFdtUmszWCtYNmtPMlJsa2FyRFo0Qzk0SWVGTE5jeHNBS0NxdkY5M3JvUWplVDZaeGIxaTJDcUNaUWFreDByeHhtUDhFeFNsNW9nR0o1d3J5Qk5BVFpkN2prYzlTMlA5bTZqNW9ZMUorUVlhVXpGZDE1NkhIVU1DWVdhSkVscy9CcUN0UlBiY1hGYnFvK0pYSFltRC9GWElGWWF6RE54TmRBdGhCK2hYRGRyaUFWSEt1MHVDLS10S0x4UFYxbSs4WCtHSS9wTDY0K2p3PT0%3D--1dfe4f204f57e914603466a3f1485209dafc063e
+        headers:
+            accept: application/json, text/javascript, */*; q=0.01
+            accept-encoding: gzip, deflate, br
+            accept-language: zh-CN,zh;q=0.9,en;q=0.8
+            cache-control: no-cache
+            pragma: no-cache
+            referer: https://wf.staging.jinshujuapp.com/lottery/5/DIoQKq?field_2=&jamr_h=LS0tCi0gRElvUUtxCi0gQ0tJRDVTYjEKLSAhcnVieS9vYmplY3Q6QWN0aXZlU3VwcG9ydDo6VGltZVdpdGhab25lCiAgdXRjOiAyMDIwLTA2LTE1IDA3OjAzOjEzLjgzODE3MTEyMyBaCiAgem9uZTogIXJ1Ynkvb2JqZWN0OkFjdGl2ZVN1cHBvcnQ6OlRpbWVab25lCiAgICBuYW1lOiBBc2lhL1NoYW5naGFpCiAgdGltZTogMjAyMC0wNi0xNSAxNTowMzoxMy44MzgxNzExMjMgWgo%3D--625f0cd013c84bb9bb02050eeb21e68f&serial_number=12
+            sec-fetch-dest: empty
+            sec-fetch-mode: cors
+            sec-fetch-site: same-origin
+            user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36
+            x-csrf-token: pYcXiAUptKn/CUqcTFn3bIf7Z0sY7qpVtV4yQNPilVqCyiuZRYyV32f7lsN92pVpMqOa3MggiUhcmi/VabnSEA==
+            x-requested-with: XMLHttpRequest
+        method: GET
+        params:
+            participant: ''
+        url: https://wf.staging.jinshujuapp.com/apps/255/prizes
+    validate:
+    -   eq:
+        - status_code
+        - 200

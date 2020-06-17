@@ -1,0 +1,55 @@
+config:
+    name: testcase description
+    variables: {}
+    verify: false
+teststeps:
+-   name: /f/DIoQKq/wheel_fortune
+    request:
+        cookies:
+            Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f: '1592365857'
+            Hm_lvt_47cd03e974df6869353431fe4f4d6b2f: 1592203783,1592208337,1592208724,1592211630
+            UM_distinctid: 172312b859c1da-05ce04942ee527-30677d00-1fa400-172312b859da72
+            _caid: IjVjN2JlOGU3ZDM3Zjc3NTQyOTI4MDM3YiI%3D--373bb3121c485a7fb2ee7da6c68a45e094a25de4
+            _ga: GA1.2.627629228.1589856192
+            _gd_session: QUVERks5emE4THpOeHFSYjcxVlZYOWhXajAxRHE2cGlqdnpEdmUwdURMek0yTkNWKzRKRlI4UllTVWdUUDNBVHErQy91QTNMMU4zZlZTSkp1Q1lZUzNQODdaSTdMa3ZXc3ludDE3dlZZVDNYUDhtT2RXT05TdzlBS1hIUWFuN2EyelVCVmg3N1lLeTdIQ1BwN1h2bUFjMlFoKzNZbFg1YXZlVnUwNFIvblVCTnJPMGNsdC81WmFSdXhGUWlrSmh6VWhQUHNtVGx3RHJ6ODBEcXZaNHZleVF4VHhSTm5vdnRnc0NDbmtlR09zdHFnbWF5K1lDV1RwRURMRzlSZ0NhZGMzQi9rWUVlTUsyWU9CREJreGZvd0dmdGhjTG8xaTVuZTh1UTJ0RU8xcGhJR0hQTGZReFBHaDViTGpnbzJ1NHYwSE1KMHQ3ZUNIbUF2TkJiTkx1OG53PT0tLWEwc2MvSm9Ld01PMXI2dmNuZ1hMcXc9PQ%3D%3D--b5bf0df2190cbf1a71a5870e84bb3f986026d963
+            _gd_sid: IjVlZTk4MjQ0YzgxNTdlODE3MWZmMTlkZCI%3D--c521aff7a6b35bf265d6610eb99f21ba7a961c28
+            _gd_sid_cny: IjVlZDg2YzQyZmM1MzI5NzI3Zjc1Nzc5YyI%3D--af2fe7f0810a35bb88783db3de9844ad1eaee9c2
+            _gd_sid_fusion: IjVlZThhMTUyMGJjMmIzMDQxOWI3NTc5MCI%3D--5369217dec1accaa8d1dd24932df1eecc2c5b6f0
+            _gd_sid_mo: IjVlY2I2M2E2NWI2NTE2MzJjNGNmMDMzOSI%3D--0929e44eb7696d06b219a2c2311aa75a652371db
+            _gd_sid_staging: IjVlZTcxNjZlNmVjNWQ5MWYwOTRlYjlhYyI%3D--bd2db442ea71a251ed79d52259cf0eed2caafcdb
+            _gd_sid_uat: IjVlZTk3ZmY2ZDQ5NmNlNzEyZGM3YTU3NSI%3D--ad9032e61147103e9b329e61f7a10019f459618e
+            _gid: GA1.2.1628975044.1592185200
+            _jinshuju_ut: IjVjZjRlNThiNGU2ZTBlNDVjYWMwMjg2NiI%3D--c39bc95f1f7e3fbe5b68f5a65880120107856a1c
+            country_code: CN
+            csrf_token: yRxFs3O0LgCKWqRHgBmBgzNOSJvF+hqGYcM16FOZJu+PmHzieMLDrbdPSA0hTPTCJe0mBfJ0Spr9ZrmYlb101A==
+            entry_token: 4iliI7gI
+            gd_registered_from: jsj_success_ad
+            gd_ssf: MTU5MjM2NTgyMQ%3D%3D--de2e693de724537376aca7dfeda748c209cf6f5b
+            has_visited_dashboard_in_two_days: 'true'
+            jsj_locale: zh-CN
+            jsj_uid: d93ef053-e8bf-4c3c-ae93-2bb8257727b9
+            last_fill_entry_token: 4iliI7gI
+            mixpanel_event_history: open_publish_link
+            need_show_switch_modal_to_user: 'false'
+            restore_entry_tooltip_viewed: 'true'
+            show_template_for_double_zero_user: 'true'
+        headers:
+            accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+            accept-encoding: gzip, deflate, br
+            accept-language: zh-CN,zh;q=0.9,en;q=0.8
+            cache-control: max-age=0
+            if-none-match: W/"372d0da5ca5b92fb7c43b32e5267b9c3"
+            referer: https://staging.jinshuju.net/f/DIoQKq/wheel_fortune
+            sec-fetch-dest: document
+            sec-fetch-mode: navigate
+            sec-fetch-site: same-origin
+            sec-fetch-user: ?1
+            upgrade-insecure-requests: '1'
+            user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36
+                (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36
+        method: GET
+        url: https://staging.jinshuju.net/f/DIoQKq/wheel_fortune
+    validate:
+    -   eq:
+        - status_code
+        - 200
