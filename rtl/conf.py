@@ -1,12 +1,14 @@
 import requests
 from faker import Faker
 from locust import task, HttpUser, SequentialTaskSet
-from locust.runners import Runner
 
 
 class Wftasks(SequentialTaskSet):
     def on_start(self):
         self.fake = Faker(locale='zh_CN')
+
+    @task
+    def open_form(self):
         self.client.get(url="https://staging.jinshuju.net/f/DIoQKq")
 
     @task
@@ -136,10 +138,9 @@ class Wftasks(SequentialTaskSet):
         print(res.status_code)
 
     @task
-    def receive(self):
+    def winning(self):
         res = self.client.get(url="https://staging.jinshuju.net/entries/5trVFx03/wheel_fortunes/results/dbbcce3b")
         print(res.status_code)
-
 
 
 class WfUser(HttpUser):
