@@ -1,12 +1,15 @@
 import requests
 from faker import Faker
-from locust import Locust, TaskSet, task, User, HttpUser, between
+from locust import task, HttpUser, SequentialTaskSet
+from locust.runners import Runner
 
 
-class Choujiang(TaskSet):
+class Wftasks(SequentialTaskSet):
     def on_start(self):
         self.fake = Faker(locale='zh_CN')
+        self.client.get(url="https://staging.jinshuju.net/f/DIoQKq")
 
+    @task
     def add_entries(self):
         self.cookies = {
             "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1592188302",
@@ -73,11 +76,12 @@ class Choujiang(TaskSet):
         }
         res = self.client.post(url="https://staging.jinshuju.net/graphql/f/DIoQKq", json=self.json,
                                headers=self.headers)
-        print(res.status_code)
+        assert res.status_code == 200
         cookie = requests.utils.dict_from_cookiejar(res.cookies)
         self.entry_token = (cookie["entry_token"])
 
-    def wheel_fortune(self, url):
+    @task
+    def wheel_fortune(self):
         cookies = {
             "Hm_lpvt_47cd03e974df6869353431fe4f4d6b2f": "1592376825",
             "Hm_lvt_47cd03e974df6869353431fe4f4d6b2f": "1592203783,1592208337,1592208724,1592211630",
@@ -122,13 +126,23 @@ class Choujiang(TaskSet):
             "upgrade-insecure-requests": "1",
             "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36",
         }
-        res = self.client.get(url=url, cookies=cookies, headers=headers)
-        print(res.text)
+        res = self.client.get(url="https://staging.jinshuju.net/f/DIoQKq/wheel_fortune", cookies=cookies,
+                              headers=headers)
+        print(res.status_code)
 
+    @task
     def lottery(self):
         res = self.client.get(url="https://staging.jinshuju.net/entries/%s/wheel_fortunes/lottery" % self.entry_token)
-        print(res.text)
+        print(res.status_code)
 
+    @task
     def receive(self):
         res = self.client.get(url="https://staging.jinshuju.net/entries/5trVFx03/wheel_fortunes/results/dbbcce3b")
-        print(res.text)
+        print(res.status_code)
+
+
+
+class WfUser(HttpUser):
+    tasks = [Wftasks]
+    min_wait = 500
+    max_wait = 2000
